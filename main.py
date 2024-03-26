@@ -12,5 +12,15 @@ MORSE_CODE_DICT = { 'A':'.-', 'B':'-...',
                     '7':'--...', '8':'---..', '9':'----.',
                     '0':'-----', ', ':'--..--', '.':'.-.-.-',
                     '?':'..--..', '/':'-..-.', '-':'-....-',
-                    '(':'-.--.', ')':'-.--.-'
+                    '(':'-.--.', ')':'-.--.-', ' ': ' '
                     }
+
+def main():
+    user_input = input("Enter your word or phrase: ").upper()
+    morse_word = ""
+    for letter in user_input:
+        morse_letter = MORSE_CODE_DICT[letter]
+        morse_word += morse_letter
+    print(morse_word)
+
+main()
